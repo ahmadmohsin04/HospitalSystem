@@ -143,7 +143,6 @@ public class Main {
         }
     }
 
-    // Method to delete patient
     public static void deletePatient() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call DeletePatient(?)}")) {
@@ -161,7 +160,6 @@ public class Main {
         }
     }
 
-    // Method to search patient by ID
     public static void searchPatientById() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call SearchPatientByID(?)}")) {
@@ -188,7 +186,6 @@ public class Main {
         }
     }
 
-    // Method to show all patients
     public static void showAllPatients() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call ShowAllPatients()}")) {
@@ -209,7 +206,6 @@ public class Main {
         }
     }
 
-    // Method for doctor-wise patient report
     public static void doctorWisePatientReport() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call DoctorWisePatientReport(?)}")) {
@@ -233,7 +229,6 @@ public class Main {
         }
     }
 
-    // Method for date-wise bill record
     public static void dateWiseBillRecord() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call DateWiseBillRecord(?)}")) {
@@ -258,7 +253,6 @@ public class Main {
         }
     }
 
-    // Method for patient-wise bill record
     public static void patientWiseBillRecord() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call PatientWiseBillRecord(?)}")) {
@@ -314,7 +308,6 @@ public class Main {
         }
     }
 
-    // Method to update a doctor
     public static void updateDoctor() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call UpdateDoctor(?, ?, ?, ?, ?, ?)}")) {
@@ -350,7 +343,6 @@ public class Main {
         }
     }
 
-    // Method to delete a doctor
     public static void deleteDoctor() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call DeleteDoctor(?)}")) {
@@ -368,7 +360,6 @@ public class Main {
         }
     }
 
-    // Method to search doctor by name
     public static void searchDoctorByName() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call SearchDoctorByName(?)}")) {
@@ -395,7 +386,6 @@ public class Main {
         }
     }
 
-    // Method to show all doctors
     public static void showAllDoctors() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call ShowAllDoctors()}")) {
@@ -417,8 +407,7 @@ public class Main {
         }
     }
 
-    // -- APPOINTMENT METHODS --
-    // Method to add an appointment
+ 
     public static void addAppointment() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call AddAppointment(?, ?, ?, ?)}")) {
@@ -447,7 +436,6 @@ public class Main {
         }
     }
 
-    // Method to delete an appointment
     public static void deleteAppointment() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call DeleteAppointment(?)}")) {
@@ -465,8 +453,6 @@ public class Main {
         }
     }
 
-    // -- BILL METHODS --
-    // Method to add a bill
     public static void addBill() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call AddBill(?, ?, ?, ?)}")) {
@@ -495,7 +481,6 @@ public class Main {
         }
     }
 
-    // Method to show all bills
     public static void showAllBills() {
         try (Connection conn = DBConnection.getConnection();
              CallableStatement stmt = conn.prepareCall("{call ShowBill()}")) {
